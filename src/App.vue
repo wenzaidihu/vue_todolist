@@ -16,8 +16,8 @@ export default {
 };
 </script>
 
-<style>
-#app {
-
-}
+<style lang="less">
+  html, body, #app {
+    height: 100%;
+  }
 </style>
