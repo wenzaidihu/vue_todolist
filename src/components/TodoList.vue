@@ -3,9 +3,11 @@
     <div class="todo-input-container">
       <TodoInput />
     </div>
-    <ul class="todo-list-container">
+    <ul class="todo-list-container list-group">
       <li class="todo-list-item-container" v-for="item in tasklist" :key="item.id">
-        <TodoListItem :task="item"/>
+        <a class="list-group-item">
+          <TodoListItem :task="item"/>
+        </a>  
       </li>
     </ul>
   </div>
@@ -58,11 +60,16 @@ export default {
     .todo-input-container {
       margin-bottom: 20px;
     }
-  }
+
     .todo-list-container {
       margin: 0px;
       padding: 0px;
       list-style: none;
-    }
 
+      .todo-list-item-container {
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+    }
+  }
 </style>

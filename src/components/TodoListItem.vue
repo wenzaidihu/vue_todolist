@@ -1,6 +1,20 @@
 <template>
   <div class="todo-list-item-wrapper">
-    {{ task.text }}
+    <div class="left-container">
+      <div class="checkbox-container">
+        <input type="checkbox" />
+      </div>
+      <div class="content-container">
+        {{ task.text }}
+      </div>
+    </div>
+    <div class="right-container">
+      <div class="delete-item-container btn-group btn-group-xs">
+        <button type="button" class="btn btn-danger">
+          delete
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -19,5 +33,19 @@ export default {
 </script>
 
 <style lang="less" scoped>
+  .todo-list-item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    .left-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .checkbox-container {
+        margin-right: 20px;
+      }
+    }
+  }
 </style>
