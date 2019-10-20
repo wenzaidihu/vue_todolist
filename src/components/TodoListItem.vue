@@ -10,7 +10,7 @@
     </div>
     <div class="right-container">
       <div class="delete-item-container btn-group btn-group-xs">
-        <button type="button" class="btn btn-danger">
+        <button type="button" class="btn btn-danger" @click="onDelete">
           删除
         </button>
       </div>
@@ -28,7 +28,12 @@ export default {
         return {};
       }
     }
-  } 
+  },
+  methods: {
+    onDelete : function() {
+      this.$emit("deleteTask", this.task.id);
+    }
+  }
 };
 </script>
 

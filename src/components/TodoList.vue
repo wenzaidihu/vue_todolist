@@ -6,7 +6,7 @@
     <ul class="todo-list-container list-group">
       <li class="todo-list-item-container" v-for="item in taskList" :key="item.id">
         <a class="list-group-item">
-          <TodoListItem :task="item" />
+          <TodoListItem :task="item" @deleteTask="deleteTask"/>
         </a>  
       </li>
     </ul>
@@ -50,6 +50,7 @@ export default {
   },
   methods: {
     getId: function() {
+      if (this.taskList.length <= 0) return 1;
       const ids = this.taskList.map(item => item.id);
       const maxId = Math.max(...ids);
       return maxId + 1;
@@ -59,6 +60,11 @@ export default {
         id: this.getId(),
         text: content,
         isFinish: false
+      });
+    },
+    deleteTask: function(taskId) {
+      this.taskList = this.taskList.filter(item => {
+        return item.id !== taskId;
       });
     }
   }
