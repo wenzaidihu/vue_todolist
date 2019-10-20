@@ -1,0 +1,96 @@
+{
+  "name": "todolist",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.1.2",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-var": "error",
+      "no-const-assign": "error",
+      "arrow-spacing": "error",
+      "no-underscore-dangle": "error",
+      "no-tabs": "error",
+      "no-multiple-empty-lines": "error",
+      "no-mixed-spaces-and-tabs": "error",
+      "jsx-quotes": ["error", "prefer-double"],
+      "indent": ["error", 2],
+      "eol-last": ["error", "always"],
+      "camelcase": "error",
+      "brace-style": ["error", "stroustrup"],
+      "array-bracket-newline": "off",
+      "no-use-before-define": "error",
+      "no-unused-vars": "error",
+      "no-undefined": "error",
+      "no-undef-init": "error",
+      "no-shadow-restricted-names": "error",
+      "init-declarations": ["error", "never"],
+      "require-await": "error",
+      "no-useless-return": "error",
+      "no-sequences": "error",
+      "no-self-compare": "error",
+      "no-self-assign": "error",
+      "no-redeclare": "error",
+      "no-multi-str": "error",
+      "no-multi-spaces": "error",
+      "no-implicit-coercion": "error",
+      "no-floating-decimal": "error",
+      "no-empty-pattern": "error",
+      "no-empty-function": "error",
+      "no-else-return": "error",
+      "eqeqeq": "error",
+      "default-case": "error",
+      "no-sparse-arrays": "error",
+      "no-extra-semi": "error",
+      "no-extra-parens": "error",
+      "no-dupe-keys": "error",
+      "no-debugger": "warn",
+      "no-console": "warn",
+      "quotes": ["error", "double"],
+      "semi": ["error", "always"],
+      "comma-dangle": ["error", {
+        "arrays": "never",
+        "objects": "never",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }]
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
