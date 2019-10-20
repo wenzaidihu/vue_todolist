@@ -24,7 +24,11 @@ export default {
   },
   methods: {
     onSubmit: function() {
-      console.log("this.content:", this.content);  
+      if (!this.content) alert("无效的任务！");
+      else {
+        this.$emit("addTask", this.content);
+        this.content = "";
+      }
     }
   }
 };

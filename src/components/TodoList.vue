@@ -1,12 +1,12 @@
 <template>
   <div class="todo-list-wrapper">
     <div class="todo-input-container">
-      <TodoInput />
+      <TodoInput @addTask="addTask" />
     </div>
     <ul class="todo-list-container list-group">
-      <li class="todo-list-item-container" v-for="item in tasklist" :key="item.id">
+      <li class="todo-list-item-container" v-for="item in taskList" :key="item.id">
         <a class="list-group-item">
-          <TodoListItem :task="item"/>
+          <TodoListItem :task="item" />
         </a>  
       </li>
     </ul>
@@ -25,7 +25,7 @@ export default {
   },
   data: function() {
     return {
-      tasklist: [{
+      taskList: [{
         id: 1,
         text: "task 1",
         isFinish: false
@@ -47,6 +47,20 @@ export default {
         isFinish: false
       }]
     }; 
+  },
+  methods: {
+    getId: function() {
+      const ids = this.taskList.map(item => item.id);
+      const maxId = Math.max(...ids);
+      return maxId + 1;
+    },
+    addTask: function(content) {
+      this.taskList.unshift({
+        id: this.getId(),
+        text: content,
+        isFinish: false
+      });
+    }
   }
 };
 </script>

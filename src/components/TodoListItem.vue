@@ -11,7 +11,7 @@
     <div class="right-container">
       <div class="delete-item-container btn-group btn-group-xs">
         <button type="button" class="btn btn-danger">
-          delete
+          删除
         </button>
       </div>
     </div>
