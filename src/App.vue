@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     
-    <HelloWorld msg="恶心心的臭大宝"/>
+    <TodoList msg="恶心心的臭大宝"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "@components/HelloWorld.vue";
+import TodoList from "@components/TodoList.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    TodoList
   }
 };
 </script>
